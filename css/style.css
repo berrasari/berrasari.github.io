@@ -3,7 +3,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #303030;
-    }
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+    
   
   h1 {
     color: white;
@@ -33,5 +35,6 @@ body {
 
   }
 
+  
   
   
