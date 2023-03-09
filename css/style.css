@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/background.jpg);
+    //background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #303030;
@@ -18,4 +18,20 @@ body {
   layout{
     
   }
+
+  table,tr,td{
+     border : 1px solid;
+     overflow-wrap: break-word;
+    color:gray;
+  }
+
+  .center{
+    margin-left:auto;
+    margin-right:auto;
+    
+
+
+  }
+
+  
   
