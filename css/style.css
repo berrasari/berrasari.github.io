@@ -1,25 +1,40 @@
+html{
+  margin:0;
+  height: 100%;
+  color:white;
+}
+
 body {
-    //background-image: url(../images/background.jpg);
+    background-image: linear-gradient(to left ,rgba(10,12,15,0.4),black),url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #303030;
+    background-color: #101010;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin:0;
+
 }
-    
+    a{
+      text-decoration-color: transparent;
+     
+  
+    }
   
   h1 {
     color: white;
-    text-align: center;
   }
   
   p {
     font-family: verdana;
     font-size: 20px;
+    color: white;
   }
 
-  layout{
+  .layout {
+    display: flex;
+    min-height: 100vh;
     
   }
+  
 
   table,tr,td{
      border : 1px solid;
@@ -33,6 +48,51 @@ body {
     
 
 
+  }
+
+  .right-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  
+
+  .left-container {
+    
+    width: 300px;
+    background-color: rgba(16, 16, 16, 0.6);
+    color: white;
+    box-shadow: 1px 5px 5px black;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    padding-left: 55px;
+  }
+  
+
+
+  .left-container h1{
+    padding-left:25px;
+    padding-top:40px;
+    padding-bottom:30px;
+    font-size: 35px;
+    text-shadow: 1px 1px 2px purple;
+
+  }
+
+  .left-container h2{
+    
+    padding-left:25px;
+    padding-top:30px;
+    color:gray;
+    opacity:0.9;
+    font-size: 20px;
+    
+
+  }
+  h2:hover {
+    color: white;
+    opacity:1;
   }
 
   
