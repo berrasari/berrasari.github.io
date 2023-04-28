@@ -141,12 +141,7 @@ function Tikla2(){
     element.style.color = "green" ;
 }
 
-function renkdegistir(){
-    var element = document.getElementById("buton");
-    element.style.color= "green";
-    // ya da innerHTML
 
-}
 
 function fareuzerinde(){
     var element = document.getElementById("buton");
@@ -173,4 +168,48 @@ function inputal() {
     }
 }
 
+function changeLinkStyle(clickedLinkId) {
+    var clickedLink = document.getElementById(clickedLinkId);
+    clickedLink.style.color = "white";
+    
+    var allLinks = document.getElementsByTagName("a");
+    for (var i = 0; i < allLinks.length; i++) {
+      var link = allLinks[i];
+      if (link.id !== clickedLinkId) {
+        link.style.color = "";
+      }
+    }
+  }
+  
+  // Get the projects element
+const projectsElement = document.getElementById('projects');
 
+// Define the options for the IntersectionObserver
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.2 // Trigger the animation when 20% of the element is visible
+};
+
+// Define the callback function for the IntersectionObserver
+const callback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add the animate class to the box elements
+      const boxes = projectsElement.querySelectorAll('.box');
+      boxes.forEach(box => box.classList.add('animate'));
+
+      // Stop observing the projects element
+      observer.unobserve(projectsElement);
+    }
+  });
+};
+
+// Create a new IntersectionObserver instance
+const observer = new IntersectionObserver(callback, options);
+
+// Observe the projects element
+observer.observe(projectsElement);
+
+
+ 

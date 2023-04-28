@@ -1,18 +1,26 @@
-html{
+html,body{
+  scroll-behavior: smooth;
 margin:0;
 height: 100%;
 color:white;
+margin: 0;
+padding: 0;
 }
 
-body {
-background-image: linear-gradient(to left ,rgba(10,12,15,0.4),black),url(../images/background.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-color: #101010;
-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-margin:0;
-
+.scroll {
+  transition: all 0.3s ease-in-out;
 }
+
+.scroll-active {
+  transform: translateY(-10px);
+}
+
+
+button{
+  background-color:transparent;
+  border-color:transparent;
+}
+
 a{
 text-decoration-color: transparent;
  }
@@ -28,11 +36,20 @@ color: white;
 }
 
 .layout {
-display: flex;
-min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
+  background-image: linear-gradient(to left ,rgba(10,12,15,0.4),black), url(../images/background.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-color: #101010;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
 
-
+  top: 0;
+  left: 0;
+  position: relative;
 }
+
 
 
 table,tr,td{
@@ -57,6 +74,9 @@ margin-left:auto;
 .right-container{
 display: flex;
 flex-direction: column;
+text-align: center;
+margin-left: 300px;
+position: relative;
 }
 
 .top-menu {
@@ -83,14 +103,11 @@ font-size:30px;
 }
 
 
-.nav-link {
-
-
-margin-right: 30px;
 
 
 
-}
+
+
 
 .menu-links a{
 
@@ -127,9 +144,7 @@ align-items: center;
 margin-right: 20px;
 }
 
-.right-container {
-text-align: center;
-}
+
 .about-container {
     padding:80px;
     background-color:rgba(16, 16, 16, 0.6);
@@ -141,16 +156,56 @@ text-align: center;
 }
 
 .box {
-    background-color: rgba(16, 16, 16, 0.6);
-    width: 300px;
+  background-color: rgba(16, 16, 16, 0.6);
+  width: 300px;
   height: 300px;
-    
-    border: 1px solid;
-    border-radius: 5px;
-    
-    border-color:#282828;
-    box-shadow: 5px 5px 5px rgba(10,12,15,1);
+  color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: #282828;
+  box-shadow: 5px 5px 5px rgba(10,12,15,1);
+  transition: transform 0.3s ease;
+  
+  
+}
+
+.box:hover {
+  transform: scale(1.05);
+  
+}
+.box:hover img{
+  opacity: 1;
+  
+}
+
+
+  .box span {
+    opacity: 0.8;
   }
+
+  .head{margin-bottom:50px;
+    padding-left:200px;
+    padding-right:200px;
+    padding-top:90px;
+    padding-bottom:90px;
+    background-color:rgba(16, 16, 16, 0.6);
+    font-size: 28px;
+    animation-name: slideInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  
+  }
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
   .d-inline-block {
     display: inline-block;
@@ -159,7 +214,19 @@ text-align: center;
   .mr-3 {
     margin-right: 3px;
   }
-  
+  .box-inside{
+    display: flex;
+    flex-direction: column
+  }
+  .box-inside img {
+    height:160px; 
+    width:280px;
+    margin-top:16px ;
+    border-radius: 5px;
+    opacity: 0.6;
+    margin-left:auto;
+margin-right:auto;
+  }
   .repo-language-color {
     display: inline-block;
     width: 12px;
@@ -173,14 +240,15 @@ text-align: center;
   }
 
  .box h2{
-    font-size:50px;
+    font-size:30px;
+    color:white;
  } 
 
 .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
+    grid-gap: 20px;
     
     justify-content: center; 
     align-items: center; 
@@ -188,7 +256,13 @@ text-align: center;
 }
 
 
+
+
 .left-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
     width: 300px;
     background-color: rgba(16, 16, 16, 0.6);
     color: white;
@@ -197,6 +271,8 @@ text-align: center;
     padding-bottom: 30px;
     padding-left: 55px;
 }
+
+
 
 .logos {
     display: flex;
@@ -233,16 +309,21 @@ text-shadow: 1px 1px 2px purple;
     color:white;
 }
 
+
+
 .left-container h2{
 
 padding-left:25px;
 padding-top:30px;
-color:gray;
-opacity:0.9;
+
 font-size: 20px;
-
-
 }
+
+.left-container a{
+  color:gray;
+opacity:0.9;
+}
+
 h2:hover {
 color: white;
 opacity:1;
