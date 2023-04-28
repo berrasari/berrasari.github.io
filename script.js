@@ -129,7 +129,7 @@ function asistan(isim,yas,memleket){
 
 var asistan1 = new asistan("berra",20,"rize");
 var asistan1 = new asistan("sıla",20,"kayseri"); //ikisi de aynı isimle kaydedilirse ikinci geçerli
-console.log(asistan1.memleket);*/
+console.log(asistan1.memleket);
 
 function Tikla(){
     alert("buton 1 tıklandı");
@@ -166,7 +166,39 @@ function inputal() {
     } else {
         alert("Please enter a valid email address.");
     }
-}
+}*/
+
+function animateprojectsContainers() {
+    const projectsContainers = document.querySelectorAll('.projects-container');
+    const windowHeight = window.innerHeight;
+  
+    projectsContainers.forEach(container => {
+      const containerTop = container.getBoundingClientRect().top;
+  
+      if (containerTop < windowHeight) {
+        container.classList.add('show');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', animateprojectsContainers);
+  
+
+function animateAboutContainers() {
+    const aboutContainers = document.querySelectorAll('.about-container');
+    const windowHeight = window.innerHeight;
+  
+    aboutContainers.forEach(container => {
+      const containerTop = container.getBoundingClientRect().top;
+  
+      if (containerTop < windowHeight) {
+        container.classList.add('show');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', animateAboutContainers);
+  
 
 function changeLinkStyle(clickedLinkId) {
     var clickedLink = document.getElementById(clickedLinkId);
