@@ -5,6 +5,12 @@ height: 100%;
 color:white;
 margin: 0;
 padding: 0;
+display: flex;
+  min-height: 100vh;
+  background-image: linear-gradient(to left ,rgba(10,12,15,0.4),black), url(../images/background.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-color: #101010;
 }
 
 .scroll {
@@ -14,6 +20,7 @@ padding: 0;
 .scroll-active {
   transform: translateY(-10px);
 }
+
 
 
 button{
@@ -36,12 +43,7 @@ color: white;
 }
 
 .layout {
-  display: flex;
-  min-height: 100vh;
-  background-image: linear-gradient(to left ,rgba(10,12,15,0.4),black), url(../images/background.jpg);
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-color: #101010;
+  
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
 
@@ -78,31 +80,6 @@ text-align: center;
 margin-left: 300px;
 position: relative;
 }
-
-.top-menu {
-
-
-background-color: rgba(16, 16, 16, 0.6);
- 
-box-shadow: 1px 5px 5px black;
-padding-top: 5px;
-padding-left : 5px;
-
-
-
-
-}
-
-.top-menu h1 {
-margin-left:30px;
-opacity:0.8;
-text-shadow: 1px 1px 2px purple;
-font-size:30px;
-
-
-}
-
-
 
 
 
@@ -258,6 +235,7 @@ margin-right:auto;
 
 
 
+
 .left-container {
   position: fixed;
   top: 0;
@@ -336,5 +314,67 @@ font-size: 18px;
 opacity:0.8;
 }
 
+/* CSS for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+
+  /* Adjust the layout */
+  .layout {
+    display: block;
+    height: auto;
+    background-size: contain;
+    padding: 20px;
+  }
+  
+  .left-container {
+    position: static;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .right-container {
+    margin-left: 0;
+  }
+  
+  /* Hide the menu */
+  .menu-links {
+    display: none;
+  }
+  
+  /* Adjust the font size */
+  h1 {
+    font-size: 28px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  /* Adjust the project grid */
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+  
+  /* Adjust the box size */
+  .box {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Adjust the image size */
+  .box-inside img {
+    height: auto;
+    width: 100%;
+  }
+  
+  /* Adjust the logo size */
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+}
 
 

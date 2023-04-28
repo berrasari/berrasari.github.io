@@ -211,5 +211,5 @@ const observer = new IntersectionObserver(callback, options);
 // Observe the projects element
 observer.observe(projectsElement);
 
+// Get the modal
 
- 
