@@ -168,6 +168,22 @@ function inputal() {
     }
 }*/
 
+function animatedesc() {
+  const desc = document.querySelectorAll('.desc-box');
+  const windowHeight = window.innerHeight;
+
+  desc.forEach(container => {
+    const containerTop = container.getBoundingClientRect().top;
+
+    if (containerTop < windowHeight) {
+      container.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', animatedesc);
+
+
 function animateprojectsContainers() {
     const projectsContainers = document.querySelectorAll('.projects-container');
     const windowHeight = window.innerHeight;
