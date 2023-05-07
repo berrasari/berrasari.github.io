@@ -402,10 +402,8 @@ font-size: 18px;
 opacity:0.8;
 }
 
-/* CSS for screens smaller than 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 
-  /* Adjust the layout */
   .layout {
     display: block;
     height: auto;
@@ -424,12 +422,10 @@ opacity:0.8;
     margin-left: 0;
   }
   
-  /* Hide the menu */
   .menu-links {
     display: none;
   }
   
-  /* Adjust the font size */
   h1 {
     font-size: 28px;
   }
@@ -438,26 +434,22 @@ opacity:0.8;
     font-size: 16px;
   }
   
-  /* Adjust the project grid */
   .projects-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 10px;
   }
   
-  /* Adjust the box size */
   .box {
     width: 100%;
     height: auto;
   }
   
-  /* Adjust the image size */
   .box-inside img {
     height: auto;
     width: 100%;
   }
   
-  /* Adjust the logo size */
   .logo {
     width: 50px;
     height: 50px;
